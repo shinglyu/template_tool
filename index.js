@@ -8,6 +8,7 @@ function updateVariables() {
     window[input.id] = input.value;
   }
 }
+
 window.addEventListener('load', function() {
   document.getElementById('form').innerHTML = render_form();
   updateVariables();
@@ -17,4 +18,10 @@ window.addEventListener('load', function() {
     updateVariables();
     document.getElementById('output').innerHTML = render_output();
   });
-})
+});
+
+//show and alert before closing
+window.addEventListener('beforeunload', (event) => {
+  event.preventDefault(); // spec requirement
+  event.returnValue = ''; // chrome workaround
+});
