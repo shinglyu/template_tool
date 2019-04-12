@@ -1,5 +1,31 @@
 p
-  span(class="category") Title:&nbsp;
+  span.category Title:&nbsp;
   span #{title}
-
-
+p
+  span.category Change Number:&nbsp;
+  span TBD
+p
+  span.category Deployment date:&nbsp;
+  span #{deployment_date}
+p
+  span.category Change details:&nbsp;
+  span #{change_details}
+p
+  span.category Impact:&nbsp;
+  span #{impact}
+p
+  span.category Jira Link::&nbsp;
+  - const jira_url = `https://livesport.atlassian.net/browser/${jira_id}`
+  a(href=jira_url) #{jira_url}
+p
+  span.category Testing:&nbsp;
+  span #{testing}
+p
+  span.category Rollout:&nbsp;
+  span Deploy drone build ##{rollout_drone_id}
+p
+  span.category Rollback:&nbsp;
+  span Deploy drone build ##{rollback_drone_id}
+p
+  span.category Presenter:&nbsp;
+  span #{presenter}

@@ -1,8 +1,17 @@
 #output {
   font-family: Sans-serif;
 }
+
 .category {
   color: darkred;
   font-weight: bold;
+}
+
+label {
+  display: block;
+}
+
+input, textarea {
+  width: 90vw;
 }
 

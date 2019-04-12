@@ -1,7 +1,10 @@
 function updateVariables() {
   var inputs = document.getElementsByTagName('input');
-  console.log(inputs)
   for (input of Array.from(inputs)){
+    window[input.id] = input.value;
+  }
+  var textareas = document.getElementsByTagName('textarea');
+  for (input of Array.from(textareas)){
     window[input.id] = input.value;
   }
 }
